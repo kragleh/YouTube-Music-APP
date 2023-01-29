@@ -15,6 +15,32 @@
     "name": "kragleh",
     "email": "kragleh@gmail.com"
   },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": ["darwin"]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "publishers": [],
+      "packagerConfig": {
+        "icon": "src/assets/images/icon.ico"
+      }
+    }
+  },
   "license": "MIT",
   "dependencies": {
     "discord-rpc": "^4.0.1",

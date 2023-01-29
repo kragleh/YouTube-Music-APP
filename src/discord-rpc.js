@@ -16,19 +16,24 @@ client.on('ready', () => {
 client.login({ clientId })
 
 var timeout = Date.now()
+var timeouts = []
 
 function setActivity(activity) {
-  let date = Date.now()
+  client.setActivity(activity)
+  /**let date = Date.now()
 
   if (timeout < date) {
     client.setActivity(activity)
     timeout = date + 15000
+    timeouts.indexOf()
     return
   }
   
-  setTimeout(() => {
+  var i = setTimeout(() => {
     setActivity(activity)
   }, 5000)
+
+  timeouts.push(i)**/
 }
 
 module.exports = setActivity
